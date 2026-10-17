@@ -4,6 +4,10 @@ Ghost Evader is a simple game intended for a beginner-level Unity tutorial. It i
 
 The videos will air as a series. A long-form video that combines all of the episodes into one will be available at the end.
 
+You can find the videos on [YouTube](https://www.youtube.com/playlist?list=PLVu4UqO_SJ8Q).
+
+There is a detailed companion blog post for this series of videos at [Kelvar's Game Dev](https://kelvarsgamedev.com).
+
 ## Game Start
 
 The game starts with the player locked in a room. The player must collect coins and stay alive as long as possible.
