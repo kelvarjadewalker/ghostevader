@@ -124,3 +124,6 @@ _build
 # Ignore JetBrains/VsCode
 .idea
 .vscode
+
+# Ignore custom local scripts
+/scripts/
