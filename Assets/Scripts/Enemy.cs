@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -35,6 +36,7 @@ public class Enemy : MonoBehaviour
         FindPlayer();
         _timeToNextDirectionChange = timeBetweenDirectionChange;
     }
+
 
     private void OnBecameInvisible()
     {

@@ -44,4 +44,25 @@ public class Player : MonoBehaviour
     {
         _playerRigidbody.linearVelocity = _gameInputScript.MoveInput * moveSpeed;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        /*  This is a C style comment that ignores everything inside
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            _gameManagerScript.PlayerHasDied();
+            Destroy(gameObject);
+
+        } 
+        */
+
+        if (other.TryGetComponent<Enemy>(out _))
+        {
+            Destroy(other.gameObject);
+            _gameManagerScript.PlayerHasDied();
+            Destroy(gameObject);
+        }
+        
+    }
 }

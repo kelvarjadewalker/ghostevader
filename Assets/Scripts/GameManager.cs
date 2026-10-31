@@ -32,5 +32,11 @@ public class GameManager : MonoBehaviour
     {
         _playerScript = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity);
     }
+    
+    // Public Functions
+    public void PlayerHasDied()
+    {
+        Debug.Log("Player Has Died");
+    }
 
 }
