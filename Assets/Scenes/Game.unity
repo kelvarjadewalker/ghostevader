@@ -155,7 +155,6 @@ MonoBehaviour:
   - {fileID: 1067649539}
   - {fileID: 1624459712}
   - {fileID: 2124584346}
-  _isRunning: 0
 --- !u!4 &391689622
 Transform:
   m_ObjectHideFlags: 0
@@ -3460,6 +3459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerPrefab: {fileID: 1763674190345421415, guid: fc4f82223884da24a83791a3028e7922, type: 3}
+  enemySpawnerScript: {fileID: 391689621}
 --- !u!4 &1611350583
 Transform:
   m_ObjectHideFlags: 0
