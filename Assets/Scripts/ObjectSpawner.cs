@@ -10,14 +10,9 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] private Transform[] spawnPointArray;
     
     // Internal Fields
-    [SerializeField] private bool _isRunning;  // This is `[SerializeField]` for testing only
+    private bool _isRunning;  
     private Coroutine _spawningCoroutine;
     
-    // Unity Events
-    private void Start()
-    {
-        StartSpawner();
-    }
 
     // Internal Functions
     private IEnumerator SpawnObjects()
@@ -32,7 +27,7 @@ public class ObjectSpawner : MonoBehaviour
         }
     }
 
-    private void StartSpawner()
+    public void StartSpawner()
     {
         if (_spawningCoroutine != null)
         {
@@ -43,14 +38,10 @@ public class ObjectSpawner : MonoBehaviour
         _spawningCoroutine = StartCoroutine(SpawnObjects());
     }
 
-    private void StopSpawner()
-    {
+   public void StopSpawner()
+   {
         _isRunning = false;
-        
-        // This is not needed, use if you hard code the spawning to always be true.
-        // You may need to make sure `_spawningRoutine` is not null
-        // StopCoroutine(_spawningRoutine);
-    }
+   }
 
     
     
