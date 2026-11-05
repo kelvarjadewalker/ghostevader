@@ -27,6 +27,7 @@ public class ObjectSpawner : MonoBehaviour
         }
     }
 
+    // External Functions
     public void StartSpawner()
     {
         if (_spawningCoroutine != null)

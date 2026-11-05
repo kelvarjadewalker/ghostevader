@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         StartRound();
     }
     
-    // Public Functions
+    // External Functions
     public void PlayerHasDied()
     {
         Debug.Log("Player Has Died");
