@@ -30,7 +30,9 @@ The player starts with 3 lives. Any contact with a ghost kills the player and th
 
 ## Source Control
 
-The game will be saved to a public GitHub repository. Each video in the series will be saved to a branch. That said, integrating Git itself into the workflow is beyond the scope of the series, to keep it simple.
+The game will be saved to a public GitHub repository. Each video in the series will be tagged.
+
+Be advised, prior to Part 11 I was using **6000.6.4f1** and the repo reflects that. See the note on the Unity Version. 
 
 ## Balancing
 
@@ -47,7 +49,11 @@ The game is intended to be an MVP (minimum viable product). After the series, we
 If there is time, we may expand the game on the channel using the most popular suggestions, if any.
 
 ## Unity Version
-This project was developed using Unity version 6.6. 
+
+This project was recorded using Unity **6000.6.4f1**, but the repository files have been updated to **6000.6.8f** (or newer) to patch a critical Unity-side security vulnerability. 
+
+**What this means for you:** Please ensure you install **Unity 6000.6.8f** via Unity Hub before opening the project. Don't worry if you see the slightly older version number on screen during the videos—everything in the tutorial is 100% identical, fully compatible, and safe to follow!
+
 
 ## Assets and Credits
 

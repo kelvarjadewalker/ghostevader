@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Editor Field
+    // Editor Fields
     [SerializeField] private float moveSpeed = 5f;
 
     private GameManager _gameManagerScript;

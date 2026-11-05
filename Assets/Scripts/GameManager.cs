@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [Header("Game")] 
     [SerializeField] private int numberOfLives = 3;
     [SerializeField] private float timeBetweenRounds = 3;
+    [SerializeField] private UIManager uiManager;
     
     [Header("Player")]
     [SerializeField] private Player playerPrefab;
@@ -35,6 +36,8 @@ public class GameManager : MonoBehaviour
         // Add any startup code
         CurrentScore = 0;
         NumberOfLives = numberOfLives;
+        uiManager.SetLivesText(NumberOfLives);
+        uiManager.SetScoreText(CurrentScore);
         StartRound();
     }
 
@@ -52,12 +55,13 @@ public class GameManager : MonoBehaviour
         StartRound();
     }
     
-    // Public Functions
+    // External Functions
     public void PlayerHasDied()
     {
         Debug.Log("Player Has Died");
         enemySpawnerScript.StopSpawner();
         NumberOfLives--;
+        uiManager.SetLivesText(NumberOfLives);
 
         if (NumberOfLives > 0)
         {
