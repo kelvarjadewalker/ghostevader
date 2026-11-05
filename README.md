@@ -30,7 +30,9 @@ The player starts with 3 lives. Any contact with a ghost kills the player and th
 
 ## Source Control
 
-The game will be saved to a public GitHub repository. Each video in the series will be saved to a branch. That said, integrating Git itself into the workflow is beyond the scope of the series, to keep it simple.
+The game will be saved to a public GitHub repository. Each video in the series will be tagged.
+
+Be advised, prior to Part 11 I was using **6000.6.4f1** and the repo reflects that. See the note on the Unity Version. 
 
 ## Balancing
 

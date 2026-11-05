@@ -2911,6 +2911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   scoreText: {fileID: 1383191842}
+  highScoreText: {fileID: 1929377058}
   livesText: {fileID: 2101093850}
 --- !u!1 &1401847208
 GameObject:
