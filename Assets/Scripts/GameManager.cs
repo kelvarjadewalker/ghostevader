@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Spawners")] 
     [SerializeField] private ObjectSpawner enemySpawnerScript;
+    [SerializeField] private ObjectSpawner pickupSpawnerScript;
+
 
     // Internal Fields
     private Player _playerScript;
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
     {
         _playerScript = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity);
         enemySpawnerScript.StartSpawner();
+        pickupSpawnerScript.StartSpawner();
         Debug.Log($"Player has {NumberOfLives} lives");
     }
     
@@ -56,10 +59,18 @@ public class GameManager : MonoBehaviour
     }
     
     // External Functions
+    public void IncrementScore(int points)
+    {
+        CurrentScore += points;
+        uiManager.SetScoreText(CurrentScore);
+    }
+    
+    
     public void PlayerHasDied()
     {
         Debug.Log("Player Has Died");
         enemySpawnerScript.StopSpawner();
+        pickupSpawnerScript.StopSpawner();
         NumberOfLives--;
         uiManager.SetLivesText(NumberOfLives);
 
