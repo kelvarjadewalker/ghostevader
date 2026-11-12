@@ -64,6 +64,7 @@ Each third-party asset folder also contains its own README with links to the sou
 | Asset | Author | Source | License | Location |
 | --- | --- | --- | --- | --- |
 | Tiny Dungeon | Kenney | [kenney.nl/assets/tiny-dungeon](https://kenney.nl/assets/tiny-dungeon) | CC0 1.0 | `Assets/Sprites/Kenney/tiny-dungeon` |
+| Coin | kotnaszynce | [opengameart.org/content/coin-2](https://opengameart.org/content/coin-2) | CC0 1.0 | `Assets/Sprites/kotnaszynce` |
 
 ## License
 
