@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         /*  This is a C style comment that ignores everything inside
+        // One way to check but is less performant and relies on string comparisons
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
@@ -63,6 +64,14 @@ public class Player : MonoBehaviour
             _gameManagerScript.PlayerHasDied();
             Destroy(gameObject);
         }
-        
+        else if (other.gameObject.TryGetComponent<Pickup>(out var pickupScript))
+        {
+            Destroy(other.gameObject);
+            
+            // The var keyword will set points to an integer because PointsPerPickup() returns an integer
+            var points = pickupScript.PointsPerPickup();
+            
+            _gameManagerScript.IncrementScore(points);
+        }
     }
 }
