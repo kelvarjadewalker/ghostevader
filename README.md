@@ -2,7 +2,7 @@
 
 Ghost Evader is a simple game intended for a beginner-level Unity tutorial. It is a vehicle for a viewer's first game using the Unity game engine.
 
-The videos will air as a series. A long-form video that combines all of the episodes into one will be available at the end.
+The videos will air as a series. 
 
 You can find the videos on [YouTube](https://www.youtube.com/playlist?list=PLVu4UqO_SJ8Q).
 
@@ -64,7 +64,10 @@ Each third-party asset folder also contains its own README with links to the sou
 | Asset | Author | Source | License | Location |
 | --- | --- | --- | --- | --- |
 | Tiny Dungeon | Kenney | [kenney.nl/assets/tiny-dungeon](https://kenney.nl/assets/tiny-dungeon) | CC0 1.0 | `Assets/Sprites/Kenney/tiny-dungeon` |
-| Coin | kotnaszynce | [opengameart.org/content/coin-2](https://opengameart.org/content/coin-2) | CC0 1.0 | `Assets/Sprites/kotnaszynce` |
+| Coin | Kotnaszynce | [opengameart.org/content/coin-2](https://opengameart.org/content/coin-2) | CC0 1.0 | `Assets/Sprites/kotnaszynce` |
+| Skulls | Mopz| [https://opengameart.org/content/skulls-adventure-music](https://opengameart.org/content/skulls-adventure-music) | CC0 1.0 | `Assets/Audio/Music/Mopz` |
+| Death Sounds| Exewin| [https://opengameart.org/content/death-sounds-0](https://opengameart.org/content/death-sounds-0) | CC0 1.0 | `Assets/Audio/Sound/Exewin` |
+| Coin Sounds| Wobbleboxx| [https://opengameart.org/content/level-up-power-up-coin-get-13-sounds](https://opengameart.org/content/level-up-power-up-coin-get-13-sounds) | CC0 1.0 | `Assets/Audio/Sound/Exewin` |
 
 ## License
 
