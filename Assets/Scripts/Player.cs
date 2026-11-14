@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
 
     private GameManager _gameManagerScript;
+    private AudioManager _audioManagerScript;
     private GameInput _gameInputScript;
     
     // Internal Fields
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     {
         _gameInputScript = FindAnyObjectByType<GameInput>();
         _gameManagerScript = FindAnyObjectByType<GameManager>();
+        _audioManagerScript = FindAnyObjectByType<AudioManager>();
         
         if (_gameInputScript == null)
         {
@@ -37,6 +39,11 @@ public class Player : MonoBehaviour
         if (_gameManagerScript == null)
         {
             Debug.LogError("Game Manager is null!");
+        }
+        
+        if (_audioManagerScript == null)
+        {
+            Debug.LogError("Audio Manager is null!");
         }
     }
 
@@ -62,14 +69,17 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject);
             _gameManagerScript.PlayerHasDied();
+            _audioManagerScript.PlayerDeathSound();
             Destroy(gameObject);
         }
         else if (other.gameObject.TryGetComponent<Pickup>(out var pickupScript))
         {
             Destroy(other.gameObject);
+            _audioManagerScript.PlayerPickupSound();
             
             // The var keyword will set points to an integer because PointsPerPickup() returns an integer
             var points = pickupScript.PointsPerPickup();
+            
             
             _gameManagerScript.IncrementScore(points);
         }
