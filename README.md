@@ -67,7 +67,7 @@ Each third-party asset folder also contains its own README with links to the sou
 | Coin | Kotnaszynce | [opengameart.org/content/coin-2](https://opengameart.org/content/coin-2) | CC0 1.0 | `Assets/Sprites/kotnaszynce` |
 | Skulls | Mopz| [https://opengameart.org/content/skulls-adventure-music](https://opengameart.org/content/skulls-adventure-music) | CC0 1.0 | `Assets/Audio/Music/Mopz` |
 | Death Sounds| Exewin| [https://opengameart.org/content/death-sounds-0](https://opengameart.org/content/death-sounds-0) | CC0 1.0 | `Assets/Audio/Sound/Exewin` |
-| Coin Sounds| Wobbleboxx| [https://opengameart.org/content/level-up-power-up-coin-get-13-sounds](https://opengameart.org/content/level-up-power-up-coin-get-13-sounds) | CC0 1.0 | `Assets/Audio/Sound/Exewin` |
+| Coin Sounds| Wobbleboxx| [https://opengameart.org/content/level-up-power-up-coin-get-13-sounds](https://opengameart.org/content/level-up-power-up-coin-get-13-sounds) | CC0 1.0 | `Assets/Audio/Sound/wobblebox` |
 
 ## License
 
