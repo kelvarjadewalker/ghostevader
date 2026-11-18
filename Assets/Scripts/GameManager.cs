@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    public bool IsPaused { get; private set; }
+    
     // Public Properties
     public int CurrentScore { get; private set; } 
     public int NumberOfLives { get; private set; } 
@@ -36,6 +38,8 @@ public class GameManager : MonoBehaviour
     private void StartGame()
     {
         // Add any startup code
+        IsPaused = false;
+        Time.timeScale = 1.0f;
         CurrentScore = 0;
         NumberOfLives = numberOfLives;
         uiManager.SetLivesText(NumberOfLives);
@@ -84,5 +88,25 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    public void TogglePause()
+    {
+        IsPaused = !IsPaused;
+        Time.timeScale = IsPaused ? 0f : 1f;
+        
+        uiManager.DisplayPauseGamePanel(IsPaused);
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
+    }
+
+    
+
+    
 
 }

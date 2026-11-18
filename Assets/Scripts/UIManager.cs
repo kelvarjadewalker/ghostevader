@@ -6,6 +6,8 @@ public class UIManager : MonoBehaviour
     // Editor Fields
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI livesText;
+    [SerializeField] private GameObject pauseGamePanel;
+    
 
     // Unity Events
     private void Awake()
@@ -14,9 +16,16 @@ public class UIManager : MonoBehaviour
 
         SetLivesText(initialValue);
         SetScoreText(initialValue);
+        DisplayPauseGamePanel(false);
     }
+    
+
 
     // External Functions
+    public void DisplayPauseGamePanel(bool show)
+    {
+        pauseGamePanel.SetActive(show);
+    }
     public void SetLivesText(int lives)
     {
         livesText.SetText($"x{lives}");
