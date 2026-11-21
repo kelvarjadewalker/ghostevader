@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour
 {
     // Editor Fields
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI highScoreText;
     [SerializeField] private TextMeshProUGUI livesText;
     [SerializeField] private GameObject pauseGamePanel;
     
@@ -34,5 +35,10 @@ public class UIManager : MonoBehaviour
     public void SetScoreText(int score)
     {
         scoreText.SetText($"{score}");
+    }
+    
+    public void SetHighScoreText(int highScore)
+    {
+        highScoreText.SetText($"{highScore}");
     }
 }

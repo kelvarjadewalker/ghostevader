@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     
     // Public Properties
     public int CurrentScore { get; private set; } 
+    public int HighScore { get; private set; } 
     public int NumberOfLives { get; private set; } 
     
     // Editor Fields
@@ -38,12 +39,14 @@ public class GameManager : MonoBehaviour
     private void StartGame()
     {
         // Add any startup code
+        HighScore = SaveSystem.LoadHighScore();
         IsPaused = false;
         Time.timeScale = 1.0f;
         CurrentScore = 0;
         NumberOfLives = numberOfLives;
         uiManager.SetLivesText(NumberOfLives);
         uiManager.SetScoreText(CurrentScore);
+        uiManager.SetHighScoreText(HighScore);
         StartRound();
     }
 
@@ -67,6 +70,13 @@ public class GameManager : MonoBehaviour
     {
         CurrentScore += points;
         uiManager.SetScoreText(CurrentScore);
+
+        if (CurrentScore > HighScore)
+        {
+            HighScore = CurrentScore;
+            SaveSystem.SaveHighScore(HighScore);
+            uiManager.SetHighScoreText(HighScore);
+        }
     }
     
     
@@ -105,7 +115,16 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    
+    public void ResetScore()
+    {
+        CurrentScore = 0;
+    }
+
+    public void ResetHighScore()
+    {
+        HighScore = 0;
+        SaveSystem.DeleteHighScore();
+    }
 
     
 
